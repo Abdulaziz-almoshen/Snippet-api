@@ -18,8 +18,20 @@ class SnippetResource extends JsonResource
             'uuid' => $this->uuid,
             'title' => $this->title,
             'steps_count' => $this->steps()->count(),
-            'step' => new StepResource($this->steps())
+            'step' => new Steps($this->steps),
+            'author' => new PublicUserResource($this->user),
+            'owner' => $this->getCheckOwner()
 
         ];
+    }
+
+
+
+    /**
+     * @return boolean
+     */
+    public function getCheckOwner()
+    {
+        return $this->user->id === optional(auth()->user())->id;
     }
 }

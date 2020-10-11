@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class StepResource extends JsonResource
+class PublicUserResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,12 +14,9 @@ class StepResource extends JsonResource
      */
     public function toArray($request)
     {
-
         return [
-            'uuid' => $this->uuid,
-            'order' => ( float) $this->order,
-            'title' => $this->title,
-            'body' => $this->body,
+            'id' => $this->id,
+            'name' => $this->name,
         ];
     }
 }

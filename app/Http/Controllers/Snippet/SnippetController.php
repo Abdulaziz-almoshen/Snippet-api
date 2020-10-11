@@ -4,9 +4,11 @@ namespace app\http\controllers\snippet;
 
 use app\http\controllers\controller;
 use App\Http\Resources\SnippetResource;
+use App\Http\Resources\StepResource;
 use App\Http\Resources\UserResource;
 use App\Snippet;
-use illuminate\http\request;
+use Illuminate\Http\Request;
+//use illuminate\http\request;
 use Illuminate\Support\Str;
 
 class SnippetController extends controller
@@ -19,14 +21,21 @@ class SnippetController extends controller
 
     public function show(Snippet $snippet)
     {
-        dd($snippet);
         return new SnippetResource($snippet);
     }
 
     public function store (Request $request)
     {
+        $snippet = auth()->user()->snippets()->create();
+       return  new SnippetResource($snippet);
 
-        $snippet =auth()->user()->snippets()->create();
+    }
+
+    public function update (Request $request, Snippet $snippet)
+    {
+//        dd($request->all());
+        $snippet->update($request->only('title'));
+        return  new SnippetResource($snippet);
 
     }
 }

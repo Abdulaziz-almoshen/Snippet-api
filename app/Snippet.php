@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use App\Step;
+
 
 class Snippet extends Model
 {
@@ -13,6 +15,7 @@ class Snippet extends Model
     {
         return 'uuid';
     }
+
     protected static function booted()
     {
         static::creating(function ($snippet){
@@ -28,7 +31,12 @@ class Snippet extends Model
 
     public function steps()
     {
-        return $this->hasMany(Step::class)->orderBy(['order', 'asc']);
+        return $this->hasMany(Step::class)->orderBy('order', 'asc');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
 

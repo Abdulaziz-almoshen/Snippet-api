@@ -12,6 +12,7 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function() {
 });
 Route::group(['prefix' => 'snippets', 'namespace' => 'Snippet'], function() {
     Route::post('','SnippetController@store');
-    Route::get('{uuid}','SnippetController@show');
+    Route::get('{snippet}','SnippetController@show');
+    Route::patch('{snippet}','SnippetController@update');
 });
 
