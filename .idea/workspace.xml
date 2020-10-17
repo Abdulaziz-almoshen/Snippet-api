@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="424f8a31-ac3e-4d66-adad-1b1f9590e5b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/PublicUserResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Steps.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Snippet/StepController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_17_082730_change_order_column_type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Snippet/SnippetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Snippet/SnippetController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/SnippetResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/SnippetResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/StepResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/StepResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Snippet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Snippet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Step.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Step.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,6 +133,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
       <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
       <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
     </include_path>
   </component>
   <component name="ProjectId" id="1h8WWkR59YK1N8gH3zbvQgWeCYj" />
@@ -175,7 +176,9 @@
       <workItem from="1602080703848" duration="16775000" />
       <workItem from="1602414270893" duration="216000" />
       <workItem from="1602416186132" duration="162000" />
-      <workItem from="1602437440109" duration="2606000" />
+      <workItem from="1602437440109" duration="3631000" />
+      <workItem from="1602514193954" duration="2720000" />
+      <workItem from="1602540724801" duration="21818000" />
     </task>
     <servers />
   </component>
@@ -186,17 +189,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1546" y="-950" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602093698918">
-      <screen x="920" y="-1418" width="3440" height="1418" />
+    <state x="-2814" y="55" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602602122766">
+      <screen x="-3440" y="-413" width="3440" height="1418" />
     </state>
+    <state x="-2814" y="55" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.22.1680.1028/-5360.-53.1920.1058/-3440.-413.3440.1418@-3440.-413.3440.1418" timestamp="1602602122766" />
     <state x="1546" y="-950" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.22.1680.1028/920.-1418.3440.1418/-1000.-1058.1920.1058@920.-1418.3440.1418" timestamp="1602093698918" />
     <state x="1546" y="-949" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.1027/920.-1417.3440.1417/-1000.-1057.1920.1057@920.-1417.3440.1417" timestamp="1601734982767" />
     <state x="1590" y="-946" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1602012640643">
       <screen x="920" y="-1418" width="3440" height="1418" />
     </state>
     <state x="1590" y="-946" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.22.1680.1028/-1000.-1058.1920.1058/920.-1418.3440.1418@920.-1418.3440.1418" timestamp="1602012640643" />
-    <state x="505" y="250" width="671" height="663" key="search.everywhere.popup" timestamp="1602437842600">
-      <screen x="0" y="22" width="1680" height="1028" />
+    <state x="-2406" y="-98" width="1374" height="914" key="search.everywhere.popup" timestamp="1602923632680">
+      <screen x="-3440" y="-412" width="3440" height="1417" />
     </state>
     <state x="-2406" y="-99" width="1374" height="916" key="search.everywhere.popup/-5360.-53.1920.1058/0.22.1680.1028/-3440.-413.3440.1418@-3440.-413.3440.1418" timestamp="1602354128081" />
     <state x="2714" y="320" width="1372" height="928" key="search.everywhere.popup/0.0.1680.1050/1680.0.3440.1440@1680.0.3440.1440" timestamp="1599814257019" />
@@ -204,6 +208,7 @@
     <state x="110" y="-1104" width="1374" height="916" key="search.everywhere.popup/0.22.1680.1028/-2204.-1083.1280.1002/-924.-1418.3440.1418@-924.-1418.3440.1418" timestamp="1601917558306" />
     <state x="2714" y="336" width="1374" height="915" key="search.everywhere.popup/0.22.1680.1028/5120.22.1920.1058/1680.22.3440.1418@1680.22.3440.1418" timestamp="1601591784039" />
     <state x="505" y="250" width="671" height="663" key="search.everywhere.popup/0.22.1680.1028@0.22.1680.1028" timestamp="1602437842600" />
+    <state x="-2406" y="-98" width="1374" height="914" key="search.everywhere.popup/0.23.1680.1027/-5360.-52.1920.1057/-3440.-412.3440.1417@-3440.-412.3440.1417" timestamp="1602923632680" />
     <state x="1954" y="-1103" width="1374" height="915" key="search.everywhere.popup/0.23.1680.1027/920.-1417.3440.1417/-1000.-1057.1920.1057@920.-1417.3440.1417" timestamp="1602235797758" />
   </component>
   <component name="XDebuggerManager">

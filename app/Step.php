@@ -21,4 +21,32 @@ class Step extends Model
         return $this->belongsToMany(Snippet::class);
     }
 
+    public function getRouteKeyName()
+    {
+        return 'uuid';
+    }
+
+    public function afterStep()
+    {
+        $adjacent = self::where('order','>', $this->order)
+            ->orderBy('order','asc')
+            ->first();
+        if (!$adjacent) {
+            return self::orderBy('order','desc')->first()->order + 1 ;
+        }
+
+        return $adjacent->order + $this->order / 2;
+    }
+    public function beforeStep()
+    {
+        $adjacent = self::where('order','<', $this->order)
+            ->orderBy('order','asc')
+            ->first();
+        if (!$adjacent) {
+            return self::orderBy('order','asc')->first()->order - 1 ;
+        }
+
+        return $adjacent->order + $this->order / 2;
+    }
+
 }
