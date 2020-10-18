@@ -16,5 +16,6 @@ Route::group(['prefix' => 'snippets', 'namespace' => 'Snippet'], function() {
     Route::patch('{snippet}','SnippetController@update');
     Route::patch('step/{step}','StepController@update');
     Route::post('step/{snippet}','StepController@store');
+    Route::delete('step/{step}','StepController@destroy');
 });
 

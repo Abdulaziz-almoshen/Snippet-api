@@ -34,12 +34,18 @@ class StepController extends Controller
         return new StepResource($step);
     }
 
+    public function destroy(Snippet $snippet, Step $step , Request $request)
+    {
+       $step->delete();
+    }
+
     protected function getOrder (Request $request){
         return Step::where('uuid', $request->before)
             ->orwhere('uuid', $request->after)
             ->first()
             ->{($request->after ? 'after' : 'before').'Step'}();
     }
+
 
 
 }
