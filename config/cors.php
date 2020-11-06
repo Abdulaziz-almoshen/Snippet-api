@@ -17,9 +17,9 @@ return [
 //
 //    'paths' => ['api/*'],
 //
-////    'exposed_headers' => [],
-////
-////    'max_age' => 0,
+//   'exposed_headers' => [],
+//
+//   'max_age' => 0,
 //
 //    'supports_credentials' => true,
 

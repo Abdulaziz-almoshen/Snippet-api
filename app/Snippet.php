@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use App\Step;
@@ -9,7 +10,7 @@ use App\Step;
 
 class Snippet extends Model
 {
-    protected $fillable = ['title', 'uuid'];
+    protected $fillable = ['title', 'uuid', 'is_public'];
 
     public function getRouteKeyName()
     {
@@ -27,6 +28,16 @@ class Snippet extends Model
             ]);
         });
 
+    }
+
+    public function isPublic()
+    {
+        return $this->is_public;
+    }
+
+    public function scopePublic(Builder $builder)
+    {
+        return $builder->where('is_public',true);
     }
 
     public function steps()

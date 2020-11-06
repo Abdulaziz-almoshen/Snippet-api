@@ -18,9 +18,10 @@ class SnippetResource extends JsonResource
             'uuid' => $this->uuid,
             'title' => $this->title,
             'steps_count' => $this->steps()->count(),
+            'is_public' => $this->is_public,
             'step' => new Steps($this->steps),
             'author' => new PublicUserResource($this->user),
-            'owner' => $this->getCheckOwner()
+            'owner' => $this->getCheckOwner(),
 
         ];
     }

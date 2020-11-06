@@ -18,7 +18,7 @@ class Step extends Model
 
     public function snippet()
     {
-        return $this->belongsToMany(Snippet::class);
+        return $this->belongsTo(Snippet::class);
     }
 
     public function getRouteKeyName()
@@ -45,8 +45,6 @@ class Step extends Model
         if (!$adjacent) {
             return self::orderBy('order','asc')->first()->order - 1 ;
         }
-
         return $adjacent->order + $this->order / 2;
     }
-
 }

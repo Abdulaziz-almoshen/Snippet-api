@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="424f8a31-ac3e-4d66-adad-1b1f9590e5b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/SnippetCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Policies/SnippetPolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Policies/StepPolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_20_070628_add_is_public_to_nippet.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Snippet/SnippetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Snippet/SnippetController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Snippet/StepController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Snippet/StepController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/SnippetResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/SnippetResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Snippet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Snippet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Step.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Step.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +186,11 @@
       <workItem from="1602416186132" duration="162000" />
       <workItem from="1602437440109" duration="3631000" />
       <workItem from="1602514193954" duration="2720000" />
-      <workItem from="1602540724801" duration="23896000" />
+      <workItem from="1602540724801" duration="37990000" />
+      <workItem from="1603775181365" duration="356000" />
+      <workItem from="1603987636178" duration="1202000" />
+      <workItem from="1604164559919" duration="530000" />
+      <workItem from="1604208816950" duration="15165000" />
     </task>
     <servers />
   </component>
@@ -182,26 +201,33 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-2814" y="55" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602602122766">
+    <state x="-1154" y="39" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1604421057786">
       <screen x="-3440" y="-413" width="3440" height="1418" />
+    </state>
+    <state x="-1154" y="39" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.22.1680.1028/-3440.-413.3440.1418/-5360.-53.1920.1058@-3440.-413.3440.1418" timestamp="1604421057786" />
+    <state x="-2814" y="56" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603289290391">
+      <screen x="-3440" y="-412" width="3440" height="1417" />
     </state>
     <state x="-2814" y="55" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.22.1680.1028/-5360.-53.1920.1058/-3440.-413.3440.1418@-3440.-413.3440.1418" timestamp="1602602122766" />
     <state x="1546" y="-950" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.22.1680.1028/920.-1418.3440.1418/-1000.-1058.1920.1058@920.-1418.3440.1418" timestamp="1602093698918" />
+    <state x="-2814" y="56" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.1027/-3440.-412.3440.1417/-5360.-52.1920.1057@-3440.-412.3440.1417" timestamp="1603289290391" />
     <state x="1546" y="-949" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.1027/920.-1417.3440.1417/-1000.-1057.1920.1057@920.-1417.3440.1417" timestamp="1601734982767" />
     <state x="1590" y="-946" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1602012640643">
       <screen x="920" y="-1418" width="3440" height="1418" />
     </state>
     <state x="1590" y="-946" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.22.1680.1028/-1000.-1058.1920.1058/920.-1418.3440.1418@920.-1418.3440.1418" timestamp="1602012640643" />
-    <state x="-2406" y="-98" width="1374" height="914" key="search.everywhere.popup" timestamp="1602923632680">
-      <screen x="-3440" y="-412" width="3440" height="1417" />
+    <state x="-2406" y="-99" width="1374" height="915" key="search.everywhere.popup" timestamp="1604600510141">
+      <screen x="-3440" y="-413" width="3440" height="1418" />
     </state>
     <state x="-2406" y="-99" width="1374" height="916" key="search.everywhere.popup/-5360.-53.1920.1058/0.22.1680.1028/-3440.-413.3440.1418@-3440.-413.3440.1418" timestamp="1602354128081" />
     <state x="2714" y="320" width="1372" height="928" key="search.everywhere.popup/0.0.1680.1050/1680.0.3440.1440@1680.0.3440.1440" timestamp="1599814257019" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1599393302990" />
     <state x="110" y="-1104" width="1374" height="916" key="search.everywhere.popup/0.22.1680.1028/-2204.-1083.1280.1002/-924.-1418.3440.1418@-924.-1418.3440.1418" timestamp="1601917558306" />
+    <state x="-2406" y="-99" width="1374" height="915" key="search.everywhere.popup/0.22.1680.1028/-3440.-413.3440.1418/-5360.-53.1920.1058@-3440.-413.3440.1418" timestamp="1604600510141" />
     <state x="2714" y="336" width="1374" height="915" key="search.everywhere.popup/0.22.1680.1028/5120.22.1920.1058/1680.22.3440.1418@1680.22.3440.1418" timestamp="1601591784039" />
     <state x="505" y="250" width="671" height="663" key="search.everywhere.popup/0.22.1680.1028@0.22.1680.1028" timestamp="1602437842600" />
-    <state x="-2406" y="-98" width="1374" height="914" key="search.everywhere.popup/0.23.1680.1027/-5360.-52.1920.1057/-3440.-412.3440.1417@-3440.-412.3440.1417" timestamp="1602923632680" />
+    <state x="-2406" y="-98" width="1374" height="914" key="search.everywhere.popup/0.23.1680.1027/-3440.-412.3440.1417/-5360.-52.1920.1057@-3440.-412.3440.1417" timestamp="1603177653748" />
+    <state x="-2406" y="-98" width="1374" height="914" key="search.everywhere.popup/0.23.1680.1027/-5360.-52.1920.1057/-3440.-412.3440.1417@-3440.-412.3440.1417" timestamp="1603201420141" />
     <state x="1954" y="-1103" width="1374" height="915" key="search.everywhere.popup/0.23.1680.1027/920.-1417.3440.1417/-1000.-1057.1920.1057@920.-1417.3440.1417" timestamp="1602235797758" />
   </component>
   <component name="XDebuggerManager">
@@ -210,6 +236,11 @@
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/routes/api.php</url>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Snippet.php</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

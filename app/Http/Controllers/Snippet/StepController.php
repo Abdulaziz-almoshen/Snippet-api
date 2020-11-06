@@ -14,12 +14,12 @@ class StepController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth:api'])->only('store');
+        $this->middleware(['auth:api'])->only('store','update');
     }
 
     public function update (Request $request, Snippet $snippet, Step $step)
     {
-
+        $this->authorize('update',$step);
         $step->update($request->only('title','body'));
         return  new StepResource($step);
 
@@ -27,7 +27,7 @@ class StepController extends Controller
 
     public function store(Snippet $snippet , Request $request)
     {
-
+        $this->authorize('createStep',$snippet);
         $step = $snippet->steps()->create(array_merge
         ($request->only('title','body'),
         ['order' =>$this->getOrder($request)]));
@@ -36,7 +36,8 @@ class StepController extends Controller
 
     public function destroy(Snippet $snippet, Step $step , Request $request)
     {
-       $step->delete();
+        $this->authorize('destroy',$step);
+        $step->delete();
     }
 
     protected function getOrder (Request $request){
@@ -45,7 +46,4 @@ class StepController extends Controller
             ->first()
             ->{($request->after ? 'after' : 'before').'Step'}();
     }
-
-
-
 }
